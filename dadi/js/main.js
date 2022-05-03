@@ -39,7 +39,6 @@ btnPlay.addEventListener("click",
             playerWin.innerHTML="LOSE";
             pcWin.innerHTML="WIN"
         }else{
-            console.log("pareggio");
             playerWin.innerHTML="TIE";
             pcWin.innerHTML="TIE"
         }
