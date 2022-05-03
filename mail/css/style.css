@@ -51,4 +51,22 @@ body{
 /*╔═══════════════╗
     TAG SEMANTICI
   ╚═══════════════╝*/
-/*  */
+  body{
+      background-image: url("../img/img-0.webp");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+  }
+
+.container{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+h1{
+    margin-top: 500px;
+    background-color: lightslategray;
+    border-radius: 1rem;
+    padding: 2rem;
+}

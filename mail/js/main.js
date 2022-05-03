@@ -11,8 +11,14 @@ for(let i =0; i<mail.length ; i++){
     }
 }
 
+const container= document.querySelector(".container");
+const element= document.createElement("h1")
+container.append(element)
+
 if(controllore){
     alert("mail presente")
+    element.innerHTML = "Accesso Consentito"
 } else {
     alert("mail inserita nel archivio")
+    element.innerHTML = "Accesso Consentito"
 }
