@@ -6,6 +6,15 @@
 const btnPlay= document.querySelector("#play")
 const btnReset= document.querySelector("#reset")
 
+// dati giocatore
+const playerScore= document.querySelector(".player__score")
+const playerDice= document.querySelector(".player__dice")
+const playerWin= document.querySelector(".player__win")
+// dati pc
+const pcScore= document.querySelector(".pc__score")
+const pcDice= document.querySelector(".pc__dice")
+const pcWin= document.querySelector(".pc__win")
+
 function roll6(){
     return Math.floor(Math.random() * 6) + 1;
 }
@@ -18,14 +27,24 @@ btnPlay.addEventListener("click",
         const dicePlayer = roll6();
         const dicePC = roll6();
 
+        playerDice.innerHTML= dicePlayer;
+        pcDice.innerHTML= dicePC;
+
         if(dicePlayer>dicePC){
             scorePlayer++;
+            playerWin.innerHTML="WIN";
+            pcWin.innerHTML="LOSE"
         }else if (dicePlayer<dicePC){
             scorePC++;
+            playerWin.innerHTML="LOSE";
+            pcWin.innerHTML="WIN"
         }else{
             console.log("pareggio");
+            playerWin.innerHTML="TIE";
+            pcWin.innerHTML="TIE"
         }
-        console.log(scorePlayer , scorePC)
+        playerScore.innerHTML=scorePlayer;
+        pcScore.innerHTML=scorePC;
     }
 )
 
@@ -33,6 +52,8 @@ btnReset.addEventListener("click",
     function(){
         scorePC=0;
         scorePlayer=0;
+        playerScore.innerHTML=scorePlayer;
+        pcScore.innerHTML=scorePC;
     }
 )
 
