@@ -41,9 +41,20 @@
 /*╔═══════════════╗
        COMMON
   ╚═══════════════╝*/
+
 body{
     font-family: 'rotobo', sans-serif;
     color: var(--colore-testo);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+/*--- TYPO ---*/
+h1{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 4rem
 }
 
 
@@ -51,3 +62,22 @@ body{
     TAG SEMANTICI
   ╚═══════════════╝*/
 /*  */
+
+
+.container{
+    text-align: center;
+}
+
+.table{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px ;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-button{
+    grid-column: span 2;
+}
+
+
